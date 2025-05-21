@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex; /* Main layout: UI on left, Viewer on right */
+    height: 100vh;
+    overflow: hidden; /* Prevent scrollbars from body */
+    background-color: #2c3e50; /* Dark background */
+    color: #ecf0f1; /* Light text */
+}
+
+#ui-container {
+    width: 300px;
+    padding: 15px;
+    background-color: #34495e;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid #2c3e50;
+}
+
+#controls {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #7f8c8d;
+}
+
+#controls label, #controls select, #controls button {
+    display: block;
+    margin-bottom: 10px;
+    width: calc(100% - 20px); /* Account for padding/border */
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+#controls button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#controls button:hover {
+    background-color: #2980b9;
+}
+
+
+#info-panel {
+    flex-grow: 1;
+    overflow-y: auto; /* Scroll if content overflows */
+}
+
+#info-panel h2 {
+    margin-top: 0;
+    color: #3498db;
+}
+
+#info-panel p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+#viewer-container {
+    flex-grow: 1; /* Takes remaining horizontal space */
+    position: relative;
+}
+
+canvas {
+    display: block; /* Important for Three.js canvas */
+}
