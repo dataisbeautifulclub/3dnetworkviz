@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Network Model Visualizer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="ui-container">
+        <div id="controls">
+            <label for="model-select">Choose Model:</label>
+            <select id="model-select">
+                <option value="osi">OSI Model</option>
+                <!-- Add more models later -->
+            </select>
+            <button id="animate-send-btn">Simulate Send</button>
+            <!-- <button id="animate-receive-btn">Simulate Receive</button> -->
+        </div>
+
+        <div id="info-panel">
+            <h2>Layer Information</h2>
+            <p id="layer-name">Name: -</p>
+            <p id="layer-purpose">Purpose: -</p>
+            <p id="layer-protocols">Protocols: -</p>
+            <p id="layer-pdu">PDU: -</p>
+        </div>
+    </div>
+
+    <div id="viewer-container">
+        <!-- 3D Canvas will be injected here -->
+    </div>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Optional: OrbitControls (if you have it locally or find another CDN) -->
+    <!-- <script src="path/to/OrbitControls.js"></script> -->
+
+    <script src="js/modelsData.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
